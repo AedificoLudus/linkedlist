@@ -142,15 +142,10 @@
   Node* LinkedList::findName(std::string Name)
   {
     Node* curr = head;
-    while(curr->getStudent()->get_name() != Name)
-    {
-      curr = curr->getNext();
-      if(curr->getNext() == nullptr &&
-          curr->getStudent()->get_name() != Name)
-      {
-        return nullptr;
-      }
-    }
+    // while(curr->getStudent()->get_name().compare(Name) == 0)
+    // {
+    //   curr = curr->getNext();
+    // }
     return curr;
   }
 
@@ -198,7 +193,7 @@
     this->concatenate(rhs);
   }
 
-  std::ostream& operator<<(std::ostream& os, LinkedList& dl)
+  ostream& operator<<(std:: ostream& os, LinkedList& dl)
   {
       Node* curr = dl.getHead();
       while(curr != nullptr)
